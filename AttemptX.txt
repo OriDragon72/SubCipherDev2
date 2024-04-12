@@ -1,0 +1,57 @@
+print("What message would you like to dencrypt?\n")
+
+message = input("[Format: str]")
+MGS = message.lower()
+
+print("\n")
+
+mgs = len(message)
+
+FreqAnalysis(mgs, MGS)
+
+print("Ref: https://pi.math.cornell.edu/%7Emec/2003-2004/cryptography/subs/frequencies.html")
+
+def FreqAnalysis(l, m):
+  print("Frequency Analysis")
+  print("-------------------")
+
+  #Reference to the frequencys of the english language
+  alphaR1 = {'a': 0, 'b': 0, 'c': 0, 'd': 0}
+  alphaR2 = {'e': 0, 'f': 0, 'g': 0, 'h': 0}
+  alphaR3 = {'i': 0, 'j': 0, 'k': 0, 'l': 0}
+  alphaR4 = {'m': 0, 'n': 0, 'o': 0, 'p': 0}
+  alphaR5 = {'q': 0, 'r': 0, 's': 0, 't': 0}
+  alphaR6 = {'u': 0, 'v': 0, 'w': 0, 'x': 0}
+  alphaR7 = {'y': 0, 'z': 0}
+
+  alphaRef = {}
+  alphaRef.update(alphaR1)
+  alphaRef.update(alphaR2)
+  alphaRef.update(alphaR3)
+  alphaRef.update(alphaR4)
+  alphaRef.update(alphaR5)
+  alphaRef.update(alphaR6)
+  alphaRef.update(alphaR7)
+
+  #Couting of apparnce
+  alphaC1 = {'a': 0, 'b': 0, 'c': 0, 'd': 0}
+  alphaC2 = {'e': 0, 'f': 0, 'g': 0, 'h': 0}
+  alphaC3 = {'i': 0, 'j': 0, 'k': 0, 'l': 0}
+  alphaC4 = {'m': 0, 'n': 0, 'o': 0, 'p': 0}
+  alphaC5 = {'q': 0, 'r': 0, 's': 0, 't': 0}
+  alphaC6 = {'u': 0, 'v': 0, 'w': 0, 'x': 0}
+  alphaC7 = {'y': 0, 'z': 0}
+
+  alphaCout = {}
+  alphaCout.update(alphaC1)
+  alphaCout.update(alphaC2)
+  alphaCout.update(alphaC3)
+  alphaCout.update(alphaC4)
+  alphaCout.update(alphaC5)
+  alphaCout.update(alphaC6)
+  alphaCout.update(alphaC7)
+
+  for i in range(l):
+    for k, v in alphaCout.items():
+        if m[i] == k:
+            alphaCout[k] += 1

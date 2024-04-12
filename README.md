@@ -13,7 +13,7 @@ This project is a Python script that aims to decipher an encrypted message, pass
 ## Usage
 1. Run the `Main.py` script.
 2. Enter the the text you would like to decrypt.
-3. Wait for the magic to happen and the results will be printed on the screen
+3. Wait for the magic to happen and the results will be printed on the screen.
 
 ## Dependencies
 - Python 3.x
